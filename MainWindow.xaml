@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TrackingSRTGenerator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Tracking SRT Generator" Height="170" Width="900">
+    <StackPanel>
+        <Button FontSize="50" x:Name="btnGenerate" Click="BtnGenerate_Click">Generate</Button>
+        <WrapPanel HorizontalAlignment="Center" Margin="10">
+            <Label VerticalAlignment="Center" ToolTip="Remember to include whitespace or shit will be stuck together">Prefix:</Label>
+            <TextBox MinWidth="200" FontSize="30" x:Name="prefix_txt" TextAlignment="Center">Time: </TextBox>
+            <Label VerticalAlignment="Center" Margin="10 0 0 0">Length in seconds:</Label>
+            <TextBox MinWidth="200" FontSize="30" x:Name="length_txt" TextAlignment="Center">11000</TextBox>
+            <Label VerticalAlignment="Center" Margin="10 0 0 0">Step in seconds:</Label>
+            <TextBox MinWidth="100" FontSize="30" x:Name="step_txt" TextAlignment="Center">0.25</TextBox>
+        </WrapPanel>
+    </StackPanel>
 </Window>
